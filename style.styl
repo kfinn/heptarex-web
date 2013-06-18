@@ -1,0 +1,163 @@
+html,body {
+  height:100%;
+  width:100%;
+}
+
+html,body,.n {
+  margin: 0;
+  padding: 0;
+}
+
+li,div {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+
+#top {
+  height:50px;
+  -webkit-box-shadow: 0 0 50px black;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index: 1;
+  background-image: -webkit-linear-gradient(top, rgba(208, 208, 208, 0.95), rgba(144, 144, 144, 0.95));
+  font-size: 20px;
+}
+
+#top * {
+  opacity: 1;
+}
+
+.fill {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+}
+
+.row {
+  display:-webkit-flex;
+  -webkit-flex-direction:row;
+}
+
+.row>* {
+  -webkit-flex:1.0;
+}
+
+#menu {
+  position:absolute;
+  bottom:0;
+  left: 0; right: 0;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+#menu img {
+  vertical-align: bottom;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  text-shadow: 0 0 20px black;
+}
+
+#top a {
+  text-shadow: 0 0 65px black;
+}
+
+.col {
+  height: 100%;
+}
+
+.col, .panel {
+  display:-webkit-flex;
+  -webkit-flex-direction:column;
+}
+
+.col li {
+  display: -webkit-flex;
+  -webkit-flex: 1.0;
+}
+
+.panel, #around .col {
+  vertical-align: middle;
+}
+
+.panel li, #around .col li {
+  display: -webkit-flex;
+  -webkit-flex: 1.0;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  text-align: center;
+}
+
+#biglogo {
+  display:inline-block;
+  vertical-align: middle;
+  width:30%;
+}
+
+#biglogo>img{
+  height:430px;
+  width:430px;
+}
+
+.section {
+  height:100%;
+  width:100%;
+  font-size: 60px;
+  color: white;
+}
+
+.content {
+  padding-top: 100px;
+  width: 60%;
+  margin: auto;
+}
+
+.content p {
+  margin: 0.25em 0;
+}
+
+#around .row {
+  padding-top: 100px;
+}
+
+#about {
+  background-image: -webkit-linear-gradient(top, #f00, #ff0);
+}
+
+#bigdata {
+  background-image: -webkit-linear-gradient(top, #b800ff, #0ff);
+}
+
+#mobile {
+  background-image: -webkit-linear-gradient(top, #6f3e00, #b66323);
+}
+
+#web {
+  background-image: -webkit-linear-gradient(top, #2cdf00, #0024cc);
+}
+
+#around {
+  background-image: -webkit-linear-gradient(top, #ff9900, #e000ff);  
+}
+
+#contact {
+  background-image: -webkit-linear-gradient(top, black, #00005f);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.panel {
+  vertical-align: middle;
+  text-align: center;
+  height: 100%;
+}

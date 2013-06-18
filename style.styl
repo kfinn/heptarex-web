@@ -1,23 +1,26 @@
 html,body
   height 100%
   width 100%
-
-html,body,.n
   margin 0
   padding 0
 
 li,div
   font-family "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
 
+background-linear-gradient(from, to)
+  background-image -webkit-linear-gradient(top, from, to)
+  background-image linear-gradient(top, from, to)
+
 #menu
   height 50px
   -webkit-box-shadow 0 0 50px black
+  box-shadow 0 0 50px black
   position fixed
   top 0
   left 0
   right 0
   z-index 1
-  background-image -webkit-linear-gradient(top, rgba(208, 208, 208, 0.95), rgba(144, 144, 144, 0.95))
+  background-linear-gradient rgba(208, 208, 208, 0.95) rgba(144, 144, 144, 0.95)
   font-size 20px
   .item
     display inline-block
@@ -27,8 +30,8 @@ li,div
     *
       display inline-block
       vertical-align middle
-  .item:first-child
-    margin-left -6px
+    &:first-child
+      margin-left -6px
 
 a 
   color white
@@ -58,42 +61,27 @@ a
   p 
     margin 0.25em 0
 
-
-#around .row 
-  padding-top 100px
-
-
 #about 
-  background-image -webkit-linear-gradient(top, #f00, #ff0)
-
+  background-linear-gradient #f00 #ff0
 
 #bigdata 
-  background-image -webkit-linear-gradient(top, #b800ff, #0ff)
-
+  background-linear-gradient #b800ff #0ff
 
 #mobile 
-  background-image -webkit-linear-gradient(top, #6f3e00, #b66323)
+  background-linear-gradient #6f3e00 #b66323
 
 
 #web 
-  background-image -webkit-linear-gradient(top, #2cdf00, #0024cc)
+  background-linear-gradient #2cdf00 #0024cc
 
 
 #around 
-  background-image -webkit-linear-gradient(top, #ff9900, #e000ff) 
-
+  background-linear-gradient #ff9900 #e000ff
 
 #contact 
-  background-image -webkit-linear-gradient(top, black, #00005f)
-
+  background-linear-gradient black #00005f
 
 ul 
   list-style none
   padding 0
   margin 0
-
-
-.panel 
-  vertical-align middle
-  text-align center
-  height 100%

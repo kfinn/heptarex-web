@@ -10,10 +10,17 @@ jQuery(function($) {
     }
     $('img.2x').attr('src', fetch2xImage);
   }
+  var inFlight;
   $('a.scroll').on('click', function() {
     var matched = this.href.match(/#.+/);
     if (matched) {
+      if (inFlight) {
+        window.clearTimeout(inFlight);
+      }
       $.scrollTo($(matched[0]), {duration: 400, easing: 'swing'});
+      inFlight = window.setTimeout(function() {
+        window.location.hash = matched[0].slice(1);
+      }, 401);
       return false;
     }
     return true;

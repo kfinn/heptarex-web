@@ -3,26 +3,28 @@ html
   head
     include style.styl
     script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js")
+    script(src="jquery.scrollTo-1.4.3.1-min.js")
     include main.js
   body
-  //- #top
-  //-   ul.row
-  //-     li: a(href="#top") 
-  //-       img.2x(src="menu_logo.png")
-  //-       | Heptarex
-  //-     li: a(href="#bigdata") Big Data
-  //-     li: a(href="#mobile") Mobile
-  //-     li: a(href="#web") Web
-  //-     li: a(href="#around") Around
-  //-     li: a(href="#contact") Contact
+  #top
+  #menu
+    .centered
+      .item: a.scroll(href="#top") 
+        img.2x(src="menu_logo.png")
+        span Heptarex
+      .item: a.scroll(href="#bigdata") Big Data
+      .item: a.scroll(href="#mobile") Mobile
+      .item: a.scroll(href="#web") Web
+      .item: a.scroll(href="#around") Around
+      .item: a.scroll(href="#contact") Contact
   #about.section
     .content
       | Heptarex is 
-      a(href="#bigdata") big data analysis
+      a.scroll(href="#bigdata") big data analysis
       | , 
-      a(href="#mobile") mobile app development
+      a.scroll(href="#mobile") mobile app development
       | , and 
-      a(href="#web") front-end design consulting
+      a.scroll(href="#web") front-end design consulting
       |  by Kevin Finn.
   #bigdata.section
     .content
@@ -35,7 +37,7 @@ html
   #web.section
     .content
       | French Horn Rebellion is a Brooklyn band with a 
-      a(href="//frenchhornrebellion.com") site built by Heptarex
+      a(href="//frenchhornrebellion.com", target="_blank") site built by Heptarex
       | .
   #around.section
     .content
@@ -48,11 +50,12 @@ html
       p
         | Follow 
         a(href="//twitter.com/superkevin") @superkevin
-        | , friend 
-        a(href="//facebook.com/kevinhfinn") Kevin Finn on Facebook
-        | , or connect with 
-        a(href="//www.linkedin.com/pub/kevin-finn/3b/411/ba5") Kevin Finn on LinkedIn
+        | , friend me on 
+        a(href="//facebook.com/kevinhfinn") Facebook
+        | , or connect on 
+        a(href="//www.linkedin.com/pub/kevin-finn/3b/411/ba5") LinkedIn
         | .
   #contact.section
+    img#biglogo.2x(src="logo.png")
     .content Want to chat?
       a(href="mailto:inquiries@heptarex.com") inquiries@heptarex.com

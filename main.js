@@ -10,4 +10,12 @@ jQuery(function($) {
     }
     $('img.2x').attr('src', fetch2xImage);
   }
+  $('a.scroll').on('click', function() {
+    var matched = this.href.match(/#.+/);
+    if (matched) {
+      $.scrollTo($(matched[0]), {duration: 400, easing: 'swing'});
+      return false;
+    }
+    return true;
+  });
 });

@@ -9,11 +9,15 @@ li,div
 
 background-linear-gradient(from, to)
   background-image -webkit-linear-gradient(top, from, to)
+  background-image -moz-linear-gradient(top, from, to)
+  background-image -ms-linear-gradient(top, from, to)
   background-image linear-gradient(top, from, to)
 
 #menu
   height 50px
   -webkit-box-shadow 0 0 50px black
+  -moz-box-shadow 0 0 50px black
+  -ms-box-shadow 0 0 50px black
   box-shadow 0 0 50px black
   position fixed
   top 0
@@ -33,7 +37,12 @@ background-linear-gradient(from, to)
     &:first-child
       margin-left -6px
 
-a 
+#logo
+  height 50px
+  width 59px
+  border none
+
+a
   color white
   text-decoration none
   text-shadow 0 0 20px black
@@ -46,7 +55,7 @@ a
   position relative
   top calc(100% \- 430px)
 
-.section 
+.section
   height 100%
   width 100%
   font-size 60px
@@ -56,32 +65,30 @@ a
   width 60%
   margin auto
 
-.content 
+.content
   padding-top 100px
-  p 
+  p
     margin 0.25em 0
 
-#about 
-  background-linear-gradient #f00 #ff0
-
-#bigdata 
+#about
   background-linear-gradient #b800ff #0ff
 
-#mobile 
-  background-linear-gradient #6f3e00 #b66323
-
-
-#web 
-  background-linear-gradient #2cdf00 #0024cc
-
-
-#around 
+#bigdata
   background-linear-gradient #ff9900 #e000ff
 
-#contact 
+#mobile
+  background-linear-gradient #6f3e00 #b66323
+
+#web
+  background-linear-gradient #2cdf00 #0024cc
+
+#around
+  background-linear-gradient #f00 #ff0
+
+#contact
   background-linear-gradient black #00005f
 
-ul 
+ul
   list-style none
   padding 0
   margin 0

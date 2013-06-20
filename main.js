@@ -10,6 +10,17 @@ jQuery(function($) {
     }
     $('img.2x').attr('src', fetch2xImage);
   }
+  var oldWindowHeight = $(window).height();
+  $(window).resize(function() {
+    var newWindowHeight = $(window).height();
+    var scrollPosition = $(window).scrollTop();
+    var sectionCount = scrollPosition / oldWindowHeight;
+    var heightDifference = oldWindowHeight - newWindowHeight;
+    var newScrollPosition = scrollPosition - sectionCount * heightDifference;
+    // console.log(sectionCount + " sections, " + heightDifference + " height change: " + scrollPosition + " -> " + newScrollPosition);
+    $(window).scrollTop(newScrollPosition);
+    oldWindowHeight = newWindowHeight;
+  });
   var inFlight;
   $('a.scroll').on('click', function() {
     var matched = this.href.match(/#.+/);

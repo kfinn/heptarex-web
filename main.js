@@ -17,7 +17,6 @@ jQuery(function($) {
     var sectionCount = scrollPosition / oldWindowHeight;
     var heightDifference = oldWindowHeight - newWindowHeight;
     var newScrollPosition = scrollPosition - sectionCount * heightDifference;
-    // console.log(sectionCount + " sections, " + heightDifference + " height change: " + scrollPosition + " -> " + newScrollPosition);
     $(window).scrollTop(newScrollPosition);
     oldWindowHeight = newWindowHeight;
   });

@@ -35,4 +35,15 @@ jQuery(function($) {
     }
     return true;
   });
+  var imageSelected = false;
+  var galleryView = $('#go');
+  var galleryFocus = $('img', galleryView);
+  $('.gallery>img').on('click', function() {
+    galleryFocus.attr('src', this.src);
+    galleryView.addClass('visible');
+    return false;
+  });
+  galleryView.click(function() {
+    galleryView.removeClass('visible');
+  })
 });

@@ -15,5 +15,7 @@ js:
 
 clean:
 	rm -f $(HTML)
+	rm -f output/*
+	rm -f bin/*
 
 .PHONY: clean

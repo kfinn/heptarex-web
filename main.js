@@ -38,12 +38,20 @@ jQuery(function($) {
   var imageSelected = false;
   var galleryView = $('#go');
   var galleryFocus = $('img', galleryView);
-  $('.gallery>img').on('click', function() {
-    galleryFocus.attr('src', this.src);
+  function fetchFullImage(src) {
+    var matched = src.match(/\.?[^.]+/g);
+    if (matched) {
+      return matched[0] + '_f' + matched[1];
+    }
+    return src;
+  }
+  $('.gallery img').on('click', function() {
+    galleryFocus.attr('src', fetchFullImage(this.src));
     galleryView.addClass('visible');
     return false;
   });
   galleryView.click(function() {
     galleryView.removeClass('visible');
+    return false;
   })
 });

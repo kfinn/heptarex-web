@@ -41,7 +41,10 @@ jQuery(function($) {
   function fetchFullImage(src) {
     var matched = src.match(/\.?[^.]+/g);
     if (matched) {
-      return matched[0] + '_f' + matched[1];
+      var matchedLength = matched.length;
+      var result = matched.slice(0, matched.length - 1).join('');
+      result += '_f' + matched[matched.length - 1];
+      return result;
     }
     return src;
   }
